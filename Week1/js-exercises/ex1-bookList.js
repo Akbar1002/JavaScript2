@@ -16,27 +16,47 @@
 
   */
 
-function createBookList(books) {
+function createBookList(list) {
   // your code goes in here, return the ul element
-}
+  cosnt main = document.getElementById('bookList');
+  const ul = document.getElementById('listItems');
 
-const books = [{
+  for(i=0; i<list.length; i++){
+    const li = document.createElement('li');
+    const p = document.createElement('p');
+    const img = document.createElement('img');
+    p.innerHTML = `${list[i].title} - ${list[i].author - ${list[i].img}}`;
+    img.src = 'https://i.postimg.cc/BbvFyK3P/download-1.jpg'
+    const color = list[i].alreadyRead ? 'green' : 'red';
+    li.style.backgroundColor = color;
+    li.appendChild(p);
+    li.appendChild(img);
+    li.appendChild(li);
+
+  }
+  main.appendChild(ul);
+// }
+
+const books = [
+  {
     title: 'The Design of Everyday Things',
     author: 'Don Norman',
-    alreadyRead: false
+    alreadyRead: false,
   },
   {
     title: 'The Most Human Human',
     author: 'Brian Christian',
-    alreadyRead: true
+    alreadyRead: true,
   },
   {
     title: 'The Pragmatic Programmer',
     author: 'Andrew Hunt',
-    alreadyRead: true
-  }
+    alreadyRead: true,
+  },
 ];
 
-let ulElement = createBookList(books);
+books.appendChild();
 
-document.querySelector("#bookList").appendChild(ulElement);
+// createBookList(books);
+
+// document.querySelector('#bookList').appendChild(ulElement);

@@ -9,3 +9,14 @@
  5. See HTML
  6. Create a new img element and set its src attribute to a picture of you.Append that element to the page.
  */
+
+const mainText = document.getElementById('main');
+mainText.style.fontFamily = 'Arial, sans-serif';
+
+const name = document.getElementById('nickname');
+name.innerText = 'AK';
+const food = document.getElementById('fav-food');
+food.innerText = 'POLO';
+
+const homeTown = document.getElementById('hometown');
+homeTown.innerText = 'AKSU';
