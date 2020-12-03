@@ -15,8 +15,20 @@ mainText.style.fontFamily = 'Arial, sans-serif';
 
 const name = document.getElementById('nickname');
 name.innerText = 'AK';
+
 const food = document.getElementById('fav-food');
 food.innerText = 'POLO';
 
 const homeTown = document.getElementById('hometown');
 homeTown.innerText = 'AKSU';
+
+// let listItem = documentElementByTagName('li')
+// listItem = Array.from(listItem);
+// listItem.forEach(function){
+
+// // }
+const myImage = document.createElement('img');
+myImage.className = 'img';
+myImage.src = 'https://i.postimg.cc/1tJsLT9J/IMG-6076.jpg';
+myImage.style.width = '300px';
+document.body.appendChild(myImage);

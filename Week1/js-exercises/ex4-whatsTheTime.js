@@ -21,5 +21,9 @@ function displayCurrentTime() {
   document.body.innerHTML = `${hours} : ${minutes}  
   : ${seconds}`;
 }
+// hours.style.color = 'red';
+//couldn't able to add style ??why
+
+displayCurrentTime();
 
 setInterval(displayCurrentTime, 1000);

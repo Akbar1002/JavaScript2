@@ -15,27 +15,35 @@
   https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 
   */
-
+console.log('work')
 function createBookList(list) {
   // your code goes in here, return the ul element
-  cosnt main = document.getElementById('bookList');
+  const main = document.getElementById('bookList');
   const ul = document.getElementById('listItems');
 
   for(i=0; i<list.length; i++){
+    
     const li = document.createElement('li');
     const p = document.createElement('p');
     const img = document.createElement('img');
-    p.innerHTML = `${list[i].title} - ${list[i].author - ${list[i].img}}`;
+    p.innerHTML = `${list[i].title} - ${list[i].author} - ${list[i].img}}`;
     img.src = 'https://i.postimg.cc/BbvFyK3P/download-1.jpg'
+
+    img.src = 'https://i.postimg.cc/RhVqq13g/download-1.jpg'
+
+    img.src = 'https://i.postimg.cc/4yLycKVs/download-2.jpg'
+
     const color = list[i].alreadyRead ? 'green' : 'red';
     li.style.backgroundColor = color;
-    li.appendChild(p);
+    
+    document.body.ul appendChild(li);
     li.appendChild(img);
-    li.appendChild(li);
+    li.appendChild(p);
 
   }
-  main.appendChild(ul);
-// }
+
+  ul.appendChild('li');
+
 
 const books = [
   {
@@ -55,8 +63,5 @@ const books = [
   },
 ];
 
-books.appendChild();
 
-// createBookList(books);
-
-// document.querySelector('#bookList').appendChild(ulElement);
+createBookList(books);
