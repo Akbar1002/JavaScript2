@@ -1,5 +1,8 @@
 // your code goes in here
 
+const btn = document.getElementById('btm');
+const quote = document.getElementById('quote');
+
 const quotes = [
   {
     quote: 'Action speaks loader than words',
@@ -26,3 +29,7 @@ const quotes = [
     author: ' Will Rogers',
   },
 ];
+
+btm.addEventListener('click', function () {
+  var randomQuote = quotes[Math.floor(Math.random().quotes.length)];
+});

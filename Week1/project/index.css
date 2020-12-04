@@ -5,22 +5,25 @@ body {
 .white-box{
     position: relative;
     margin: 150px 150px;
-    background-color: papayawhip;
+    background-color: white;
     width: 80%;
     height: 400px;
 }
 
 
 
-ul {
-    list-style: none;
-    color: orange;
-    font-size: 1.5rem;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+#quote {
+position: relative;
+text-align: center;
+
+margin-top: 300px;
 }
 
 
-.button {
-    display: flex;
-    justify-content: space-around;
+#btm {
+    margin:300px 70px 100px 900px;
+    background-color: orange;
+    color:white
+    border
+    
 }
