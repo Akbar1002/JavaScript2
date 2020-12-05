@@ -1,35 +1,39 @@
 // your code goes in here
 
-const btn = document.getElementById('btm');
-const quote = document.getElementById('quote');
-
 const quotes = [
   {
     quote: 'Action speaks loader than words',
-    author: 'Mark Twain',
+    author: '- Mark Twain',
   },
   {
     quote: 'You talk when you cease to be at peace with your thoughts.',
-    author: 'Kahlil Gibran',
+    author: '- Kahlil Gibran',
   },
   {
     quote: 'Beauty is not in the face; beauty is a light in the heart..',
-    author: 'Kahlil Gibran',
+    author: '- Kahlil Gibran',
   },
   {
     quote: 'We are all like the bright moon, we still have our darker side.',
-    author: 'Kahlil Gibran',
+    author: '- Kahlil Gibran',
   },
   {
     quote: 'Generosity is giving more than you can, and pride is taking less than you need.',
-    author: 'Kahlil Gibran',
+    author: '- Kahlil Gibran',
   },
   {
     quote: "Don't let yesterday take up too much of today.",
-    author: ' Will Rogers',
+    author: '- Will Rogers',
   },
 ];
 
-btm.addEventListener('click', function () {
-  var randomQuote = quotes[Math.floor(Math.random().quotes.length)];
+const btn = document.getElementById('btn');
+const quote = document.querySelector('#quote');
+const author = document.querySelector('#author');
+
+btn.addEventListener('click', function () {
+  let random = Math.floor(Math.random() * quotes.length);
+
+  quote.innerHTML = quotes[random].quote;
+  author.innerHTML = quotes[random].author;
 });

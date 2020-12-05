@@ -1,29 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
 body {
+    height: 100vh;
     background-color:orange;
-}
-
-.white-box{
-    position: relative;
-    margin: 150px 150px;
-    background-color: white;
-    width: 80%;
-    height: 400px;
-}
-
-
-
-#quote {
-position: relative;
-text-align: center;
-
-margin-top: 300px;
-}
-
-
-#btm {
-    margin:300px 70px 100px 900px;
-    background-color: orange;
-    color:white
-    border
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
+
+
+.white-box{
+    background-color: whitesmoke;
+
+    width: 750px;
+    height: 370px;
+    margin: 0 10px;
+}
+
+.icon-quote{
+    text-align: center;
+    color:orange;
+    font-size: 2rem;
+    font-weight:400 ;
+    margin: 60px 30px;
+}
+
+#author{
+    margin: 30px 60px;
+    text-align: right;
+    color: orange;
+}
+
+
+.social{
+    width:90px;
+    display: flex;
+    margin-left: 70px;
+    justify-content: space-around;
+
+}   
+
+
+#socialt{
+    width:30px;
+    height:30px;
+    background-color: orange;
+    padding: 5px;
+
+}
+
+#socialtt{
+    width:30px;
+    height:30px;
+    background-color: orange;
+    padding: 5px;
+    
+}
+
+
+
+
+
+#btn{
+    background-color: orange;
+    width:80px;
+    height: 35px;
+    outline:none;
+    border-color: orange;
+    color: white;
+    margin-left: 80%;
+}
+
+
+input{
+    margin-top: 5px;
+    width:190px;
+    height: 35px;
+    border: white;
+}
+
+
+
