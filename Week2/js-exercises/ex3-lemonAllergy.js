@@ -11,9 +11,14 @@
 
  */
 
-
 function takeOutLemons(basket) {
-  // your code goes in here. The output is a string 
+  // your code goes in here. The output is a string
+  const withoutLemon = basket.filter(function (fruit) {
+    if (fruit !== 'Lemon') {
+      return fruit;
+    }
+  });
+  return `My mom bought me a fruit basket, containing ${JSON.stringify(withoutLemon)}!`;
 }
 
 const fruitBasket = ['Apple', 'Lemon', 'Grapefruit', 'Lemon', 'Banana', 'Watermelon', 'Lemon'];

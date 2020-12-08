@@ -8,9 +8,9 @@
  Put the list items in an unordered list
  */
 
-function createHTMLList(arr) {
-  // your code goes in here
-}
+// function createHTMLList(arr) {
+//   // your code goes in here
+// }
 
 const myHobbies = [
   'Meditation',
@@ -19,3 +19,12 @@ const myHobbies = [
   'Hanging out with friends',
   'Going to the gym',
 ];
+
+myHobbies.forEach(function (hobbyList) {
+  console.log(`${hobbyList}`);
+});
+
+const myList = document.createElement('ul');
+const listItem = document.createElement('li');
+
+document.body.appendChild(myList);

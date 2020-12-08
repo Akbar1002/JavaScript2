@@ -66,9 +66,15 @@ body {
     
 }
 
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
-
-
+i{
+    color:white;
+}
 
 #btn{
     background-color: orange;

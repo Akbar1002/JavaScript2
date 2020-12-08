@@ -11,12 +11,26 @@
 
  */
 
-
 function dayWorth(tasks, hourlyRate) {
   // put your code in here, the function does returns a euro formatted string
+  const time = tasks.map(function (activity) {
+    return activity.duration;
+  });
+  const totalTime = mondayTasks.reduce(function (total, time) {
+    return total + time.duration;
+  }, 0);
+
+  const hour = totalTime / 60;
+  const hourworth = (hour * hourlyRate).toFixed(2);
+  return `${hourworth}euro`;
 }
 
-const mondayTasks = [{
+//simplified version
+// const dayWorth = (tasks, rate) =>
+//   ((tasks.map((e) => e.duration).reduce((s, h) => s + h, 0) / 60) * rate).toFixed(2);
+
+const mondayTasks = [
+  {
     name: 'Daily standup',
     duration: 30, // specified in minutes
   },
@@ -34,5 +48,5 @@ const mondayTasks = [{
   },
 ];
 
-console.log(dayWorth(mondayTasks, 25))
-console.log(dayWorth(mondayTasks, 13.37))
+console.log(dayWorth(mondayTasks, 25));
+console.log(dayWorth(mondayTasks, 13.37));
