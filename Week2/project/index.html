@@ -4,11 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
   <title>Pomodoro Clock</title>
 </head>
 
 <body>
   <div id="app">
+   <h1>Pomodoro Clock</h1>
+     <h2>Session Length</h2>
+      <div class="settime">
+       <i class="fas fa-arrow-up"></i>
+       <p id="time">XX</p>
+       <i class="fas fa-arrow-down"></i>
+      </div>
+      <div class="square">
+        <h3>Session</h3>
+        <div id="timer">25:00</div>
+      </div>
+      <div class="play-stop">
+        <i class="fas fa-play"></i>
+        <i class="fas fa-pause"></i>
+
+      </div>
+
 
   </div>
   <script src="index.js"></script>
