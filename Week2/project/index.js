@@ -8,3 +8,38 @@
   If the timer finishes the timer should be replaced by the message: Time 's up!
  * 
  */
+
+const timeH = document.querySelector('#timer');
+const playBtn = document.getElementById('play');
+const stopBtn = document.getElementById('stop');
+
+let timeSec = 1500;
+
+displayTime(timeSec);
+
+function count() {
+  const countDown = setInterval(() => {
+    timeSec--;
+    displayTime(timeSec);
+
+    if (timeSec <= 0 || timeSec < 1) {
+      clearInterval(countDown);
+      endTime();
+    }
+  }, 1000);
+}
+
+function displayTime(second) {
+  const min = Math.floor(second / 60);
+  const sec = Math.floor(second % 60);
+  timeH.innerHTML = `${min}:${sec}`;
+}
+
+function endTime() {
+  timeH.innerHTML = "Time 's up!";
+}
+
+playBtn.addEventListener('click', count);
+stopBtn.addEventListener('click', endTime);
+
+function stopTimer() {}
