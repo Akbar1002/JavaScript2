@@ -18,11 +18,8 @@ function displayCurrentTime() {
   const minutes = currentTime.getMinutes();
   const seconds = currentTime.getSeconds();
 
-  document.body.innerHTML = `${hours} : ${minutes}  
-  : ${seconds}`;
+  document.body.innerHTML = `${hours} : ${minutes}  : ${seconds}`;
 }
-// hours.style.color = 'red';
-//couldn't able to add style ??why
 
 displayCurrentTime();
 

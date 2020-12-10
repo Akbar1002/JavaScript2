@@ -15,7 +15,7 @@
 function hijackGoogleLogo(id) {
   // your code goes in here
   const target = document.getElementById(id);
-  target.src = 'https: //www.hackyourfuture.dk/static/logo-dark.svg';
+  target.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
   target.srcset = 'https: //www.hackyourfuture.dk/static/logo-dark.svg';
 }
 

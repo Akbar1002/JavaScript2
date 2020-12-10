@@ -17,7 +17,9 @@ const img2 = document.getElementById('img2');
 img2.style.display = 'none';
 let distance = -img1.width;
 let time = 500;
-setInterval(() => {
+let catWalkingTimer = setInterval(moveCat, time);
+
+function moveCat() {
   distance += 25;
   img1.style.left = `${distance}px`;
   if (distance >= window.innerWidth) {
@@ -27,12 +29,14 @@ setInterval(() => {
     distance >= (window.innerWidth - img1.width) / 2 &&
     distance < (window.innerWidth - img1.width) / 2 + 25
   ) {
+    clearInterval(catWalkingTimer);
     img2.style.left = `${distance}px`;
     img2.style.display = 'unset';
     img1.style.display = 'none';
     setTimeout(() => {
       img1.style.display = 'unset';
       img2.style.display = 'none';
+      catWalkingTimer = setInterval(moveCat, time);
     }, 5000);
   }
-}, time);
+}
