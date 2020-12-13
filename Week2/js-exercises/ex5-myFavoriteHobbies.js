@@ -8,17 +8,14 @@
  Put the list items in an unordered list
  */
 
-function createHTMLList(arr) {
-  // your code goes in here
-  const hobbies = arr.map((hobby) => {
+// your code goes in here
+const myList = document.querySelector('#myList');
+function createHTMLList() {
+  myHobbies.forEach((i) => {
     const listItem = document.createElement('li');
-    listItem.textContent = hobby;
-    const hobbyList = document.createElement('ul');
-    hobbyList.appendChild(listItem);
-
-    return document.body.appendChild(hobbyList);
+    listItem.innerHTML = i;
+    myList.appendChild(listItem);
   });
-  return hobbies;
 }
 
 const myHobbies = [
