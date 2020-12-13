@@ -50,7 +50,7 @@ function count() {
     displayTime(timeSec);
 
     if (timeSec <= 0 || timeSec < 1) {
-      clearInterval(countDown);
+      endTime();
     }
   }, 1000);
 }
@@ -61,6 +61,10 @@ function displayTime(second) {
   const zeroSec = sec < 10 ? '0' : '';
   const zeroMin = min < 10 ? '0' : '';
   timeH.innerHTML = `${zeroMin}${min}:${zeroSec}${sec}`;
+}
+
+function endTime() {
+  timeH.innerHTML = 'Time is Up!';
 }
 
 function pauseTime() {
