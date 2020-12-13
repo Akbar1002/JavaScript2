@@ -16,50 +16,59 @@ const up = document.getElementById('up');
 const setTime = document.getElementById('setTime');
 const down = document.getElementById('down');
 
+let timeSec = 1500;
 let setMin = 25;
+let loading = false;
 setTime.innerHTML = setMin;
+
 function increaseMin() {
-  return (setTime.innerHTML = ++setMin); // what is the difference of ++setMin and setMin++.
+  if (loading) return;
+  ++setMin;
+  setTime.innerHTML = setMin;
+  timeH.innerHTML = setMin;
+  timeSec = 60 * setMin;
 }
 
 function decreaseMin() {
-  console.log(setMin);
-  return (setTime.innerHTML = --setMin); // how to stop number becoming minus?
+  if (loading) return;
+  --setMin;
+  if (setMin < 1) return;
+  setTime.innerHTML = setMin;
+  timeH.innerHTML = setMin;
+  timeSec = 60 * setMin;
 }
 
-let timeSec = 1500;
 let min;
 let sec;
 let countDown;
 displayTime(timeSec);
 
 function count() {
-  let countDown = setInterval(() => {
+  loading = true;
+  countDown = setInterval(() => {
     timeSec--;
     displayTime(timeSec);
 
     if (timeSec <= 0 || timeSec < 1) {
       clearInterval(countDown);
-      endTime();
     }
   }, 1000);
-  up.disable = true;
-  down.disable = true;
 }
 
 function displayTime(second) {
   min = Math.floor(second / 60);
   sec = Math.floor(second % 60);
-  timeH.innerHTML = `${min}:${sec}`;
+  const zeroSec = sec < 10 ? '0' : '';
+  const zeroMin = min < 10 ? '0' : '';
+  timeH.innerHTML = `${zeroMin}${min}:${zeroSec}${sec}`;
 }
 
-function endTime() {
-  console.log(`${min}:${sec}`);
+function pauseTime() {
+  loading = false;
   clearInterval(countDown);
-  timeH.innerHTML = `${min}:${sec}`;
 }
 
 playBtn.addEventListener('click', count);
-stopBtn.addEventListener('click', endTime);
+stopBtn.addEventListener('click', pauseTime);
 up.addEventListener('click', increaseMin);
 down.addEventListener('click', decreaseMin);
