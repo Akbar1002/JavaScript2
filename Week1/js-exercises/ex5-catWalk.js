@@ -40,3 +40,5 @@ function moveCat() {
     }, 5000);
   }
 }
+
+// fixed all mistakes but could not able to  commit properly//

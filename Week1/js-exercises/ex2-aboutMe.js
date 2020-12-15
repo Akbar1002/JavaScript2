@@ -33,3 +33,5 @@ myImage.className = 'img';
 myImage.src = 'https://i.postimg.cc/1tJsLT9J/IMG-6076.jpg';
 myImage.style.width = '300px';
 document.body.appendChild(myImage);
+
+
