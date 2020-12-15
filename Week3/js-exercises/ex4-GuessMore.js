@@ -18,7 +18,7 @@ f1(x);
 console.log(x);
 
 const y = {
-  x: 9
+  x: 9,
 };
 
 function f2(val) {
@@ -27,3 +27,12 @@ function f2(val) {
 }
 f2(y);
 console.log(y);
+
+// In the first case the result is 9, but in the f1 funtion it returns 10.
+// when we console log outside function scope. we couldn't able to get inside value.
+in other words we have value in function scope. but we call it in glabal scope.
+
+In the second function we get 10, because for objects there are sane context.
+
+
+

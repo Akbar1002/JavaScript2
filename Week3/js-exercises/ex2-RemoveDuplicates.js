@@ -26,10 +26,14 @@ function checkSolution(array) {
 }
 
 // WRITE YOUR FUNCTION HERE
-
+function removeDuplicates(array) {
+  console.log(new Set(array));
+}
 const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
 removeDuplicates(letters);
 
 if (checkSolution(letters)) {
-  console.log("Hooray!");
+  console.log('Hooray!');
 }
+
+checkSolution(letters);

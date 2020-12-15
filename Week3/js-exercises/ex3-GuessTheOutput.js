@@ -19,3 +19,7 @@ const x = (function () {
 })();
 
 x();
+
+
+Output should be 12, because of the function scope can influnce global scope. 
+in the function scope the value of a is redefined.
