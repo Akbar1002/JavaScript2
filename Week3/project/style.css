@@ -43,20 +43,99 @@ text-align:center;
 
 .bill{
     display:flex;
-    margin-left: 20px;  
+    margin-left: 20px;
+    font-size: 2rem;  
 }
 
 .billInput{
     display:flex;
     margin-left: 20px; 
+    width:450px;
+    height:60px ;
+    font-size: 30px;
+    scrollbar-shadow-color: blue;
+    box-shadow:inset 0 0 2px #888;
 }
 
 .service{
     display:flex;
     margin-left: 20px; 
+    font-size: 2rem;  
 }
 
 .serviceSelect{
-    display:flex;
+    
     margin-left: 20px; 
+    font-size: 30px;
+    width:450px;
+    height:60px ;
+    border-radius: 10px;
+    font-weight: bold;
 }
+
+.share{
+    display:flex;
+    font-size: 2rem; 
+    margin-left: 20px;  
+}
+
+
+.container{
+    display: flex;
+}
+
+.people{
+    font-size: 25px;
+    margin-left:10px;
+    margin-top: 15px;
+
+}
+
+.peopleInput{
+    display:flex;
+    margin-left: 20px;
+    width:450px;
+    height:60px ;
+    font-size:2rem;
+    box-shadow:inset 0 0 2px #888;
+    
+}
+
+#btn{
+    margin-top:70px;
+    width:250px;
+    height:70px;
+    background-color:rgb(160, 17, 17);
+    font-size:1.5rem;
+    font-weight: bold;
+    color:white;
+}
+
+
+.tip{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.result{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+
+.each{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
