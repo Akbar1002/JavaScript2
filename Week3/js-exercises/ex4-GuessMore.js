@@ -28,11 +28,9 @@ function f2(val) {
 f2(y);
 console.log(y);
 
-// In the first case the result is 9, but in the f1 funtion it returns 10.
-// when we console log outside function scope. we couldn't able to get inside value.
+/* In the first case the result is 9, but in the f1 funtion inside it returns 10.
+ when we console log outside function scope. we couldn't able to get inside value.
 in other words we have value in function scope. but we call it in glabal scope.
 
-In the second function we get 10, because for objects there are sane context.
-
-
-
+In the second function we get 10, because for objects there are in same context.
+the argument in the first function is passed by value and the secound one is passed by reference*/

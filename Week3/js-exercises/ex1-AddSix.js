@@ -9,16 +9,19 @@ Call the function three times. The return values should be:
  15, 24, 33
 
  */
-
-function createBase(num) {
-  // Put here your logic...
-  return num + 6;
+function createBase(/* ???? */) {
+  function createBase(num) {
+    // Put here your logic...
+    return function addNine() {
+      num = num + 9;
+      return num;
+    };
+  }
 }
-
-const addSix = createBase(6);
+const addNine = createBase(6);
 
 // Put here your function calls...
 
-createBase(9);
-createBase(18);
-createBase(27);
+createBase(addNine());
+createBase(addNine());
+createBase(addNine());

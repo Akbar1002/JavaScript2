@@ -27,12 +27,15 @@ function checkSolution(array) {
 
 // WRITE YOUR FUNCTION HERE
 function removeDuplicates(array) {
-  console.log(new Set(array));
+  newArr = new Set(array);
+  return newArr;
 }
+
 const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
+
 removeDuplicates(letters);
 
-if (checkSolution(letters)) {
+if (removeDuplicates(letters) == ['a', 'b', 'c', 'd', 'e', 'f']) {
   console.log('Hooray!');
 }
 
