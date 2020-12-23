@@ -25,15 +25,15 @@ function checkSolution(array) {
   return true;
 }
 
-// WRITE YOUR FUNCTION HERE
-function removeDuplicates(array) {
-  newArr = new Set(array);
-  return newArr;
-}
+// // WRITE YOUR FUNCTION HERE
+// function removeDuplicates(array) {
+//   let newArr = new Set(array);
+//   return newArr;
+// }
 
 const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
 
-removeDuplicates(letters);
+// removeDuplicates(letters);
 
 if (removeDuplicates(letters) == ['a', 'b', 'c', 'd', 'e', 'f']) {
   console.log('Hooray!');

@@ -9,15 +9,15 @@ Call the function three times. The return values should be:
  15, 24, 33
 
  */
-function createBase(/* ???? */) {
-  function createBase(num) {
-    // Put here your logic...
-    return function addNine() {
-      num = num + 9;
-      return num;
-    };
-  }
+
+function createBase(num) {
+  // Put here your logic...
+  return function addNine() {
+    num = num + 9;
+    return num;
+  };
 }
+
 const addNine = createBase(6);
 
 // Put here your function calls...
