@@ -26,17 +26,19 @@ function checkSolution(array) {
 }
 
 // // WRITE YOUR FUNCTION HERE
-// function removeDuplicates(array) {
-//   let newArr = new Set(array);
-//   return newArr;
-// }
-
-const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
-
-// removeDuplicates(letters);
-
-if (removeDuplicates(letters) == ['a', 'b', 'c', 'd', 'e', 'f']) {
-  console.log('Hooray!');
+// // using filtter
+function removeDuplicates(letters) {
+  return letters.filter(function (item, index, array) {
+    return array.indexOf(item) === index;
+  });
 }
 
-checkSolution(letters);
+const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c', 'b'];
+removeDuplicates(letters);
+
+const array = removeDuplicates(letters);
+console.log(array);
+
+if (checkSolution(array)) {
+  console.log('Hooray!');
+}
